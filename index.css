@@ -1,0 +1,68 @@
+body {
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 2rem;
+    background-color: #F0E68C;
+    margin: 0;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #F0E68C;
+    text-shadow: 2px 2px 0 #000;
+}
+
+.pokemon_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+.pokemon_desc {
+    width: 25%;
+    text-align: center;
+    margin: 0 15px 50px 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5%;
+}
+
+.pokemon_desc:hover {
+    box-shadow:  0 5px 5px 5px #FFA500;
+    transition: .5s;
+}
+
+form {
+    text-align: center;
+    margin: 30px;
+}
+
+input {
+    padding: 15px 20px;
+    margin: 0 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+input:hover {
+    background-color: #FFA500;
+    transition: .5s;
+}
+
+.limit_page {
+    margin: 10px;
+}
+
+.limit_page input {
+    padding: 5px;
+    margin: 0;
+}
