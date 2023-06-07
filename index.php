@@ -34,7 +34,7 @@
     // レスポンスデータは JSON 形式なので、デコードして連想配列にする
     $data = json_decode($response, true);
     // 取得結果をループさせてポケモンの名前を表示する
-    print("<pre class='pokemon_wrap'>");
+    echo ("<pre class='pokemon_wrap'>");
     foreach($data['results'] as $key => $value){
         $URL = $value['url'];
         $Response = file_get_contents($URL);
@@ -56,7 +56,8 @@
     $type_response = file_get_contents($type_url);
     $type_data = json_decode($type_response, true);
 
-    print("<div class='pokemon_desc'>");
+    // ポケモンカード表面
+    echo ("<div class='pokemon_desc_front'>");
         $img_url = ($Data['sprites']['front_default']); // 正面向きのイメージ
         echo "<img src='{$img_url}'>"; 
         echo "<br>";
@@ -68,20 +69,15 @@
         echo "<br>";
         echo "重さ：" . ($Data['weight']); // おもさ
         echo "<br>";
-
-
-
-
-    print("</div>");
+    echo ("</div>");
     }
-    
-    print("</pre>");
-
+    // ポケモンカード裏面
+    // echo ("<div class='pokemon_desc_back'>");
+    // echo ("</div>");
+    echo ("</pre>");
 
 
     // ページネーション
-
-
     echo <<< _FORM_
     <form action="index.php">
         <input type="submit" name="prev" value="前へ">
@@ -98,7 +94,6 @@
         </div>
     </form>
     _FORM_;
-
     ?>
 </body>
 </html>
